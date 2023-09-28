@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers</title>
+    <script src="numbers-script.js"></script>
+    <link rel="stylesheet" href="numbers-styles.css">
+</head>
+<body>
+    <h1 id="header" class="header">Click on the numbers in the right order</h1>
+    <input type="button" id="buttonmenu" class="menubutton" onclick="location.reload()" value="Restart">
+
+    
+    <div class="button-container">
+        <input type="button" id="button1" class="button" onclick="numberClick(this.value, this.id)" value=1>
+        <input type="button" id="button2" class="button" onclick="numberClick(this.value, this.id)" value=2>
+        <input type="button" id="button3" class="button" onclick="numberClick(this.value, this.id)" value=3>
+        <input type="button" id="button4" class="button" onclick="numberClick(this.value, this.id)" value=4>
+        <div id="messageDiv" class="messageDiv">Try Again</div>
+    </div>
+</body>
+
+
+</html>
