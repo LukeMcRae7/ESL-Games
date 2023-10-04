@@ -1,0 +1,70 @@
+@font-face { font-family: Century Gothic; src: url('./Images/Century\ Gothic.ttf'); } 
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272932; 
+    font-family: Century Gothic;
+}
+
+.button1 {
+    width: 450px;
+    position: absolute;
+    top: 150px;
+    left: 400px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 3px solid;
+}
+
+.button1:hover {
+    width: 450px;
+    position: absolute;
+    top: 150px;
+    left: 400px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 3px solid;
+    filter: brightness(80%);
+}
+
+
+.button2 {
+    width: 450px;
+    position: absolute;
+    top: 150px;
+    right: 400px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 3px solid;
+}
+
+.button2:hover {
+    width: 450px;
+    position: absolute;
+    top: 150px;
+    right: 400px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 3px solid;
+    filter: brightness(80%);
+}
+
+.header {
+color: #ffffff;
+font-family: Century Gothic;
+font-size: 50px;
+transition: all 0.7s;
+
+-webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Safari */
+ -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none;
+}

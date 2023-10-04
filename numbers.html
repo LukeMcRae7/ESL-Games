@@ -9,7 +9,8 @@
 </head>
 <body>
     <h1 id="header" class="header">Click on the numbers in the right order</h1>
-    <input type="button" id="buttonmenu" class="menubutton" onclick="location.reload()" value="Restart">
+    <input type="button" id="buttonmenu1" class="menubutton" onclick="window.location.href = 'main.html'" value="Menu">
+    <input type="button" id="buttonmenu2" class="menubutton" onclick="location.reload()" value="Restart" style="top: 80px;">
 
     
     <div class="button-container">
@@ -18,6 +19,7 @@
         <input type="button" id="button3" class="button" onclick="numberClick(this.value, this.id)" value=3>
         <input type="button" id="button4" class="button" onclick="numberClick(this.value, this.id)" value=4>
         <div id="messageDiv" class="messageDiv">Try Again</div>
+        <div id="winDiv" class="winDiv">You Win!</div>
     </div>
 </body>
 

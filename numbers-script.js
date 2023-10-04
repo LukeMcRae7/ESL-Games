@@ -25,6 +25,26 @@ function numberClick(numValue, buttonID) {
 
     if(numValue == count){
         count += 1;
+            
+    if(count == 101) {
+      document.getElementById('winDiv').style.opacity = 100;
+      document.getElementById('button1').disabled = true;
+      document.getElementById('button1').style.opacity = 0;
+      document.getElementById('button1').style.cursor = 'default';
+
+      document.getElementById('button2').disabled = true;
+      document.getElementById('button2').style.opacity = 0;
+      document.getElementById('button2').style.cursor = 'default';
+
+      document.getElementById('button3').disabled = true;
+      document.getElementById('button3').style.opacity = 0;
+      document.getElementById('button3').style.cursor = 'default';
+
+      document.getElementById('button4').disabled = true;
+      document.getElementById('button4').style.opacity = 0;
+      document.getElementById('button4').style.cursor = 'default';
+    }
+    else{
         myButton.disabled = true;
         myButton.style.opacity = 0;
         myButton.style.cursor = 'default';
@@ -34,10 +54,14 @@ function numberClick(numValue, buttonID) {
             setTimeout(function() {
                 resetButtons();
                 shuffle()
+                if(document.getElementById('button1').value == 100) {document.getElementById('button1').style.fontSize = '80px'}
+                if(document.getElementById('button2').value == 100) {document.getElementById('button2').style.fontSize = '80px'}
+                if(document.getElementById('button3').value == 100) {document.getElementById('button3').style.fontSize = '80px'}
+                if(document.getElementById('button4').value == 100) {document.getElementById('button4').style.fontSize = '80px'}
               }, 200);
 
         }
-
+      }
     } else {
         count = (segment * 4) - 3;
         resetButtons();
