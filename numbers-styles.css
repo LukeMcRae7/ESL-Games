@@ -1,0 +1,122 @@
+@font-face { font-family: Century Gothic; src: url('./Images/Century\ Gothic.ttf'); }
+
+* {
+    font-family: Century Gothic;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272932;
+}
+
+.button-container {
+    position: absolute;
+    top: 20%;
+    left: 36%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 70%; /* Adjust the gap as needed */
+}
+
+
+.button {
+    flex: 1;
+    width: 8.1vw; /* Use percentage-based width */
+    background-color: #3d96da;
+    color: #ffffff;
+    text-align: center;
+    font-size: 6.5vw; /* Responsive font size based on the viewport width */
+    font-weight: bold;
+    border-radius: 20%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 3;
+}
+
+.button:hover {
+    flex: 1;
+    width: 8.1vw; /* Use percentage-based width */
+    background-color: #3684bf;
+    color: #d0d0d0;
+    text-align: center;
+    font-size: 6.5vw; /* Responsive font size based on the viewport width */
+    font-weight: bold;
+    border-radius: 20%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 3;
+}
+
+.messageDiv, .winDiv {
+    color: #dedede;
+    text-align: center;
+    position: absolute;
+    top: 70%; /* Use percentage-based top position */
+    left: 35%;
+    width: 100%; /* Use percentage-based width */
+    font-size: 2.5vw; /* Responsive font size based on the viewport width */
+    opacity: 0;
+    transition: all 0.2s;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.winDiv {
+    color: #272932;
+    text-align: center;
+    position: absolute;
+    background-color: #c1b22a;
+    top: 70%; /* Use percentage-based top position */
+    width: 100%; /* Use percentage-based width */
+    font-size: 2.5vw; /* Responsive font size based on the viewport width */
+    left: 35%; /* Use percentage-based left position */
+    opacity: 0;
+    transition: all 0.2s;
+    z-index: -1;
+}
+
+.header {
+    color: #ffffff;
+    font-size: 2.5vw; /* Responsive font size based on the viewport width */
+    transition: all 0.7s;
+    position: absolute;
+    top: 1%; /* Use percentage-based top position */
+}
+
+.menubutton {
+    position: absolute;
+    left: 1%; /* Adjust left position as needed */
+    top: 2%; /* Adjust top position as needed */
+    height: 7%; /* Adjust height as needed */
+    width: 8%; /* Adjust width as needed */
+    background-color: #3d96da;
+    color: #ffffff;
+    font-size: 2vw; /* Responsive font size based on the viewport width */
+    border-radius: 0.5vw;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.menubutton:hover {
+    position: absolute;
+    left: 1%; /* Adjust left position as needed */
+    top: 2%; /* Adjust top position as needed */
+    height: 7%; /* Adjust height as needed */
+    width: 8%; /* Adjust width as needed */
+    background-color: #3684bf;
+    color:#d0d0d0;
+    font-size: 2vw; /* Responsive font size based on the viewport width */
+    border-radius: 0.5vw;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}

@@ -1,0 +1,61 @@
+@font-face { font-family: Century Gothic; src: url('./Images/Century\ Gothic.ttf'); }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272932;
+    font-family: Century Gothic;
+}
+.button-container {
+    position: absolute;
+    top: 10%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5%;
+    width: 44%;
+    left: 28%;
+}
+
+.button1,
+.button2 {
+    width: 45%; /* Adjust the width as needed */
+    max-width: 45%; /* Limit the maximum width for larger screens */
+    position: absolute;
+    top: 10%; /* Keep the same top position */
+    border-radius: 2vw;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 0.25vw solid;
+}
+
+.button1 {
+    left: 0%; /* Use percentages for left position */
+}
+
+.button2 {
+    right: 0%; /* Use percentages for right position */
+}
+
+.button1:hover,
+.button2:hover {
+    width: 45%; /* Adjust the width as needed */
+    max-width: 45%; /* Limit the maximum width for larger screens */
+    position: absolute;
+    top: 10%; /* Keep the same top position */
+    border-radius: 2vw;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 0.25vw solid;
+    filter: brightness(80%);
+}
+
+.header {
+    color: #ffffff;
+    font-family: Century Gothic;
+    font-size: 4vw; /* Responsive font size based on the viewport width */
+    transition: all 0.7s;
+    position: absolute;
+    top: -2vw; /* Use percentages for top position */
+}
