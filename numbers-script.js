@@ -54,10 +54,10 @@ function numberClick(numValue, buttonID) {
             setTimeout(function() {
                 resetButtons();
                 shuffle()
-                if(document.getElementById('button1').value == 100) {document.getElementById('button1').style.fontSize = '80px'}
-                if(document.getElementById('button2').value == 100) {document.getElementById('button2').style.fontSize = '80px'}
-                if(document.getElementById('button3').value == 100) {document.getElementById('button3').style.fontSize = '80px'}
-                if(document.getElementById('button4').value == 100) {document.getElementById('button4').style.fontSize = '80px'}
+                if(document.getElementById('button1').value == 100) {document.getElementById('button1').style.fontSize = '4vw'}
+                if(document.getElementById('button2').value == 100) {document.getElementById('button2').style.fontSize = '4vw'}
+                if(document.getElementById('button3').value == 100) {document.getElementById('button3').style.fontSize = '4vw'}
+                if(document.getElementById('button4').value == 100) {document.getElementById('button4').style.fontSize = '4vw'}
               }, 200);
 
         }

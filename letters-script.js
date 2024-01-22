@@ -77,12 +77,12 @@ function areAllButtonsGreen() {
 
 function letterSelect(clicked) {
 if(current == '' && clicked.style.backgroundColor != 'green') {
-  clicked.style.borderWidth = '6px';
+  clicked.style.backgroundColor = '#c0a52d';
   current = clicked;
 }
 else if (clicked.style.backgroundColor != 'green'){
   if (clicked.value == clicked.value.toLowerCase() && current.value == current.value.toUpperCase()){
-    current.style.borderWidth = '0px';
+    current.style.backgroundColor = '#3d96da';
 
     if (clicked.value.toUpperCase() == current.value){
       clicked.style.backgroundColor = 'green';
@@ -117,7 +117,7 @@ else if (clicked.style.backgroundColor != 'green'){
    }
 
   if (clicked.value == clicked.value.toUpperCase() && current.value == current.value.toLowerCase()){
-    current.style.borderWidth = '0px';
+    current.style.backgroundColor = '#3d96da';
     if (clicked.value.toLowerCase() == current.value){
       clicked.style.backgroundColor = 'green';
       current.style.backgroundColor = 'green';
