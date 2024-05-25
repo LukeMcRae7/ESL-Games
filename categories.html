@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories</title>
+
+  <style>
+    * {
+        border-radius: 0.5vw;
+        font-family: 'Century Gothic';
+        user-select: none;
+    }
+    body {
+        background-color: #272932;
+    }
+    .container {
+      display: flex;
+      width: 100%;
+    }
+
+    .category {
+      flex: 1;
+      padding-top: 0%;
+      padding-left: 4%;
+      border: 0.2vw solid #ddd;
+      text-align: center;
+      margin: 1%;
+      height: 24vw;
+    }
+
+    .spacer {
+      flex: 1;
+      padding: 4%;
+      text-align: center;
+      margin: 3%;
+    }
+
+    .category h3 {
+        font-size: 1.3vw;
+        color: white;
+      margin-bottom: 9%;
+      margin-right: 40%;
+      text-align: center;
+
+    }
+
+    .draggable {
+        line-height: 2.6vw;
+        text-align: center;
+        font-size: 1.2vw;
+        margin: 0.4%;
+      background-color: rgb(172, 174, 181);
+      width: 6vw;
+      height: 2.5vw;
+      margin-bottom: 0%;
+      cursor: grab;
+      border: 0.25vw solid;
+      border-color: #575074;
+      font-weight: bold;
+    }
+
+    .draggable.dragging {
+      opacity: 0.7;
+      cursor: grabbing;
+    }
+
+    .category.active {
+      border: 0.2vw solid rgb(228, 229, 161);
+    }
+
+    .uibutton {
+      height: 3vw;
+      width: 10vw;
+      background-color: #3d96da;
+      color: #ffffff;
+      font-size: 1.7vw;
+      border-radius: 0.5vw;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .uibutton:hover {
+      height: 3vw;
+      width: 10vw;
+      background-color: #3684bf;
+      color:#d0d0d0;
+      font-size: 1.7vw;
+      border-radius: 0.5vw;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center; color: white; font-size: 1.5vw;">Drag the words into the correct categories</h1>
+  <button class="uibutton" style="position: absolute; top: 2%; width: 8vw;" onclick="//go to menu">Menu</button>
+  <button class="uibutton" style="position: absolute; top: 9%; width: 8vw;" onclick="location.reload()">Restart</button>
+  <div class="container">
+    <div class="spacer">
+      </div>
+    <div id="category1" title="food" class="category">
+      <h3 id="category1Label">Food</h3>
+    </div>
+    <div id="category2" title="verbs" class="category">
+      <h3 id="category2Label">Verbs</h3>
+    </div>
+    <div id="category3" title="clothes" class="category">
+      <h3 id="category3Label">Clothes</h3>
+    </div>
+    <div class="spacer">
+      <div style="font-size: 3vw; color: white; background-color: #383c49; padding: 5%; width: 10vw;">
+        Score:
+        <div id="scoreboard">0/0</div>
+      </div>
+    </div>
+  </div><br>
+  <div style="text-align: center; color: white; font-size: 2vw;">Words:</div>
+  <div id="wordBank" class="category" style="display: flex; margin-left: 5%; margin-right: 12%; padding-top: 1.5%; padding-bottom: 1.5%; height: auto; padding-left: 2%; width: 87vw;">
+    <div id="word1" class="draggable" draggable="true">shirt</div>
+    <div id="word2" class="draggable" draggable="true">jump</div>
+    <div id="word3" class="draggable" draggable="true">pants</div>
+    <div id="word4" class="draggable" draggable="true">run</div>
+    <div id="word5" class="draggable" draggable="true">steak</div>
+    <div id="word6" class="draggable" draggable="true">carrot</div>
+    <div id="word7" class="draggable" draggable="true">jacket</div>
+    <div id="word8" class="draggable" draggable="true">lettuce</div>
+    <div id="word9" class="draggable" draggable="true">throw</div>
+    <div id="word10" class="draggable" draggable="true">Div 10</div>
+    <div id="word11" class="draggable" draggable="true">Div 11</div>
+    <div id="word12" class="draggable" draggable="true">Div 12</div>
+  </div>
+
+    <div id="messageBox" style="z-index: 5; color: white; height: 10vw; width: 30vw; position: absolute; background-color: #383c49; padding: 2vw; font-size: 1.5vw; text-align: center; top: -30%; left: 33%;">
+      The red words are <b style="color: rgb(204, 51, 51);">incorrect</b>.<br>Drag them into the <i style="color: green;">correct</i> category.<br><br>
+      <button class="uibutton" onclick="removeMessageScreen()">Continue</button>
+    </div>
+
+    <div id="winBox" style="z-index: 5; color: white; height: 30vw; width: 30vw; position: absolute; background-color: #383c49; padding: 2vw; font-size: 1.5vw; text-align: center; top: -90%; left: 33%;">
+      <b style="font-size: 3vw;">Complete!</b><br><br><br>
+      Final Score:<br>
+      <div id="scoreboard2" style="font-size: 4vw;">0/0</div><br><br>
+      <button class="uibutton" style="scale: 1.5;" onclick="//go to menu">Menu</button><br><br>
+      <button class="uibutton" style="scale: 1.5;" onclick="location.reload()">Restart</button>
+    </div>
+
+  <div id="overlay" style="position: absolute; width: 100%; height: 100%; background-color: black; opacity: 0%; top: 0%; left: 0%; z-index: -1; transition: 0.5s;"></div>
+
+  <script src="categories.js"></script>
+</body>
+</html>
