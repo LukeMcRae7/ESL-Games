@@ -8,7 +8,7 @@ const categoryList = [
   // Nature
   ["sun", "moon", "clouds", "mountains", "trees", "flowers", "grass", "sand", "water", "sky", "rainbow", "river", "ocean", "lake", "desert", "forest", "jungle", "volcano", "waterfall", "glacier"],
   // Food
-  ["pizza", "pasta", "bread", "cake", "cookies", "ice cream", "chicken", "fish", "lettuce", "fruit", "cheese", "milk", "juice", "eggs", "cereal", "soup", "sandwich", "burger", "fries", "candy"],
+  ["pizza", "pasta", "bread", "cake", "cookies", "ice cream", "chicken", "cucumber", "lettuce", "fruit", "cheese", "milk", "juice", "eggs", "cereal", "soup", "sandwich", "burger", "fries", "candy"],
   // Weather
   ["sunny", "rainy", "cloudy", "windy", "snowy", "stormy", "foggy", "hot", "cold", "tornado", "humid", "dry", "breezy", "stormy", "freezing", "frost", "bright", "gloomy", "mist", "chilly"],
   // Emotions
