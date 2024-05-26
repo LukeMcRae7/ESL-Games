@@ -17,13 +17,13 @@ const categoryList = [
   ["run", "jump", "walk", "talk", "sing", "dance", "play", "eat", "sleep", "read", "write", "draw", "build", "cook", "clean", "learn", "work", "help", "love", "laugh"],
   // Clothes
   ["shirt", "pants", "dress", "skirt", "shoes", "hat", "jacket", "gloves", "scarf", "socks", "underwear", "pajamas", "suit", "tie", "belt", "sunglasses", "hat", "dress shirt", "sweater", "t-shirt"],
-  // Occupations
+  // Jobs
   ["doctor", "teacher", "firefighter", "police", "nurse", "dentist", "lawyer", "engineer", "scientist", "artist", "musician", "athlete", "writer", "chef", "baker", "hairstylist", "mechanic", "salesperson", "accountant", "architect"],
   // Home Items
   ["plate", "cup", "fork", "spoon", "knife", "table", "chair", "couch", "bed", "lamp", "desk", "rug", "curtain", "blanket", "pillow", "towel", "clock", "calendar", "lampshade", "vase"],
 ];
 
-const categoryNames = ["Animals", "Nature", "Food", "Weather", "Emotions", "Verbs", "Clothes", "Occupations", "Home Items"];
+const categoryNames = ["Animals", "Nature", "Food", "Weather", "Emotions", "Verbs", "Clothes", "Jobs", "Home Items"];
 
 function setCategories() {
   const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8];
@@ -103,7 +103,7 @@ function newDrag(myWord, myCategory) {
     else if(myCategory == 'Emotions') {items = categoryList[4]}
     else if(myCategory == 'Verbs') {items = categoryList[5]}
     else if(myCategory == 'Clothes') {items = categoryList[6]}
-    else if(myCategory == 'Occupations') {items = categoryList[7]}
+    else if(myCategory == 'Jobs') {items = categoryList[7]}
     else if(myCategory == 'Home Items') {items = categoryList[8]}
 
     if(myCategory != ''){

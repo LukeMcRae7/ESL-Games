@@ -9,20 +9,19 @@ body {
 }
 .button-container {
     position: absolute;
-    top: 10%;
+    top: 15%;
     height: 50%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5%;
-    width: 44%;
-    left: 28%;
+    grid-template-columns: repeat(3, 1fr);
+    width: 70%;
+    left: 16.5%;
 }
 
 .button1,
-.button2 {
-    width: 45%; /* Adjust the width as needed */
-    max-width: 45%; /* Limit the maximum width for larger screens */
-    position: absolute;
+.button2,
+.button3 {
+    width: 20vw; /* Adjust the width as needed */
+    max-width: 20vw; /* Limit the maximum width for larger screens */
     top: 10%; /* Keep the same top position */
     border-radius: 2vw;
     cursor: pointer;
@@ -38,11 +37,15 @@ body {
     right: 0%; /* Use percentages for right position */
 }
 
+.button3 {
+    right: 0%; /* Use percentages for right position */
+}
+
 .button1:hover,
-.button2:hover {
-    width: 45%; /* Adjust the width as needed */
-    max-width: 45%; /* Limit the maximum width for larger screens */
-    position: absolute;
+.button2:hover,
+.button3:hover {
+    width: 20vw; /* Adjust the width as needed */
+    max-width: 20vw; /* Limit the maximum width for larger screens */
     top: 10%; /* Keep the same top position */
     border-radius: 2vw;
     cursor: pointer;
